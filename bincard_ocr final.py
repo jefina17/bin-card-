@@ -11,11 +11,11 @@ import re
 
 # SETTING PAGE CONFIGURATIONS
 
-st.set_page_config(page_title= "BizCardX: Extracting Business Card Data with OCR | By Jafar Hussain",
+st.set_page_config(page_title= "BizCardX: Extracting Business Card Data with OCR | By jefina vincy",
                    layout= "wide",
                    initial_sidebar_state= "expanded",
-                   menu_items={'About': """# This OCR app is created by *Jafar Hussain*!"""})
-st.markdown("<h1 style='text-align: center; color: white;'>BizCardX: Extracting Business Card Data with OCR</h1>", unsafe_allow_html=True)
+                   menu_items={'About': """# This OCR app is created by *jefina vincy*!"""})
+st.markdown("<h1 style='text-align: center; color: black;'>BizCardX: Extracting Business Card Data with OCR</h1>", unsafe_allow_html=True)
 
 # SETTING-UP BACKGROUND IMAGE
 def setting_bg():
@@ -29,9 +29,9 @@ setting_bg()
 selected = option_menu(None, ["Home","Upload & Extract","Modify"], 
                        icons=["house","cloud-upload","pencil-square"],
                        default_index=0,
-                       orientation="horizontal",
-                       styles={"nav-link": {"font-size": "35px", "text-align": "centre", "margin": "0px", "--hover-color": "#6495ED"},
-                               "icon": {"font-size": "35px"},
+                       orientation="rectangle",
+                       styles={"nav-link": {"font-size": "30px", "text-align": "centre", "margin": "0px", "--hover-color": "#6495ED"},
+                               "icon": {"font-size": "30px"},
                                "container" : {"max-width": "6000px"},
                                "nav-link-selected": {"background-color": "#6495ED"}})
 
@@ -44,6 +44,7 @@ mydb = sql.connect(host="localhost",
                    password="Jefina2002",
                    database="bizcardx_db"
                   )
+
 mycursor = mydb.cursor(buffered=True)
 
 # TABLE CREATION
